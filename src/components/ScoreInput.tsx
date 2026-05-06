@@ -1,7 +1,7 @@
 // ScoreInput.tsx
 import React from 'react';
 // App.tsxで定義した型をインポート（実際は types.ts など別ファイルに分けるのが主流です）
-import type { CourseType, CTScores, NijiScores } from '../App';
+import type { CourseType, CTScores, NijiScores } from '../types';
 
 interface Props {
   course: CourseType;
