@@ -2,29 +2,11 @@
 import { useState, useRef, useEffect } from 'react';
 import ScoreInput from './components/ScoreInput';
 import Result from './components/Result';
+import type { CourseType, CTScores, NijiScores } from './types';
 
-// --- 1. 型定義の追加（将来的に types.ts など別ファイルに切り出すとより綺麗です） ---
-export type CourseType = 'bunkei' | 'rikei'; // 'bunkei' か 'rikei' しか許容しない
 
-export interface CTScores {
-  koku: number;
-  math: number;
-  engR: number;
-  engL: number;
-  soc: number;
-  sci: number;
-  info: number;
-}
 
-export interface NijiScores {
-  koku: number;
-  math: number;
-  eng: number;
-  soc: number;
-  sci: number;
-}
-
-export default function App() {
+function App() {
   // --- 2. ジェネリクス < > を使ってStateの型を明示 ---
   const [course, setCourse] = useState<CourseType>('bunkei');
   const [ctScores, setCtScores] = useState<CTScores>({ koku: 0, math: 0, engR: 0, engL: 0, soc: 0, sci: 0, info: 0 });
@@ -79,3 +61,5 @@ export default function App() {
     </div>
   );
 }
+
+export default App;
