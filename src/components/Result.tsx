@@ -110,7 +110,7 @@ export default function Result({ course, ctScores, nijiScores }: Props) {
       </div>
       
       <div ref={captureRef} className="bg-white p-[15px] sm:p-4 rounded-lg">
-        <div className="text-[14px] text-[#333] mb-2.5">(https://rs-dev-kyoto.github.io/kyoto-simu/)</div>
+        <div className="text-[14px] text-[#333] mb-2.5">(https://kyoto-simu.vercel.app/)</div>
         
         <div className="text-[14px] sm:text-[20px] leading-[1.6] text-[#333] tracking-tighter sm:tracking-normal">
           {results.map((res) => (
