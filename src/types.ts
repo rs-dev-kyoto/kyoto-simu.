@@ -2,7 +2,7 @@
 
 export type CourseType = 'bunkei' | 'rikei';
 
-export interface CTScores {
+export type CTScores ={
   koku: number;
   math: number;
   engR: number;
@@ -12,7 +12,7 @@ export interface CTScores {
   info: number;
 }
 
-export interface NijiScores {
+export type NijiScores ={
   koku: number;
   math: number;
   eng: number;
@@ -20,7 +20,7 @@ export interface NijiScores {
   sci: number;
 }
 
-export interface FacultyData {
+export type FacultyData ={
   name: string;
   min: number;
   ct: {
