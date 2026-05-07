@@ -8,10 +8,11 @@ import type { CourseType, CTScores, NijiScores } from './types';
 
 function App() {
   // --- 2. ジェネリクス < > を使ってStateの型を明示 ---
-  const [course, setCourse] = useState<CourseType>('bunkei');
+  const [course, setCourse] = useState<CourseType>('rikei');
   const [ctScores, setCtScores] = useState<CTScores>({ koku: 0, math: 0, engR: 0, engL: 0, soc: 0, sci: 0, info: 0 });
   const [nijiScores, setNijiScores] = useState<NijiScores>({ koku: 0, math: 0, eng: 0, soc: 0, sci: 0 });
   const [showResult, setShowResult] = useState<boolean>(false);
+  // const [submittedScores, setSubmittedScores] = useState<{ct: ctScores, niji: NijiScores} | null>(null); 
 
   // --- 3. DOM要素の型を明示（ここは既に正しくできていましたね！素晴らしいです） ---
   const resultRef = useRef<HTMLDivElement>(null);
@@ -26,6 +27,8 @@ function App() {
   const handleShowResult = () => {
     setShowResult(true);
   };
+
+  
 
   return (
     <div className="min-h-screen bg-[#f0f4f8] text-[#333] p-2 sm:p-5 font-sans">
