@@ -60,8 +60,8 @@ export default function ScoreInput({ course, setCourse, ctScores, setCtScores, n
               value={course} 
               onChange={(e) => setCourse(e.target.value as CourseType)}
             >
-              <option value="bunkei">文系</option>
               <option value="rikei">理系</option>
+              <option value="bunkei">文系</option>
             </select>
           </div>
         </div>
